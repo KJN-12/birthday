@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cake Animation Intro -->
+    <div class="intro-animation" id="intro-animation">
+        <div class="cake-container">
+            <!-- Cake plate and stand -->
+            <div class="cake-stand"></div>
+            <div class="cake-plate"></div>
+            
+            <!-- Cake layers -->
+            <div class="cake-layer layer1">
+                <div class="layer-frosting"></div>
+                <div class="drip drip1"></div>
+                <div class="drip drip2"></div>
+                <div class="drip drip3"></div>
+                <div class="drip drip4"></div>
+                <div class="drip drip5"></div>
+            </div>
+            
+            <div class="cake-layer layer2">
+                <div class="layer-frosting"></div>
+                <div class="drip drip1"></div>
+                <div class="drip drip2"></div>
+                <div class="drip drip3"></div>
+                <div class="drip drip4"></div>
+            </div>
+            
+            <div class="cake-layer layer3">
+                <div class="layer-frosting"></div>
+                <div class="drip drip1"></div>
+                <div class="drip drip2"></div>
+                <div class="drip drip3"></div>
+            </div>
+            
+            <!-- Birthday Sign/Poster - Updated text -->
+            <div class="birthday-sign">
+                <div class="sign-stick"></div>
+                <div class="sign-board">
+                    <p>Happy Birthday<br>My Love</p>
+                </div>
+            </div>
+            
+            <!-- Sprinkles -->
+            <div class="sprinkles sprinkles1"></div>
+            <div class="sprinkles sprinkles2"></div>
+            <div class="sprinkles sprinkles3"></div>
+            
+            <!-- Decorations -->
+            <div class="teddy-bear">
+                <div class="teddy-head">
+                    <div class="teddy-ear teddy-ear-left"></div>
+                    <div class="teddy-ear teddy-ear-right"></div>
+                    <div class="teddy-face">
+                        <div class="teddy-eye teddy-eye-left"></div>
+                        <div class="teddy-eye teddy-eye-right"></div>
+                        <div class="teddy-nose"></div>
+                        <div class="teddy-mouth"></div>
+                    </div>
+                </div>
+                <div class="teddy-body"></div>
+            </div>
+            
+            <div class="kuromi">
+                <div class="kuromi-head">
+                    <div class="kuromi-ear kuromi-ear-left"></div>
+                    <div class="kuromi-ear kuromi-ear-right"></div>
+                    <div class="kuromi-face">
+                        <div class="kuromi-eye kuromi-eye-left"></div>
+                        <div class="kuromi-eye kuromi-eye-right"></div>
+                    </div>
+                    <div class="kuromi-bow"></div>
+                </div>
+            </div>
+            
+            <!-- Hearts -->
+            <div class="heart-decoration heart1"></div>
+            <div class="heart-decoration heart2"></div>
+            <div class="heart-decoration heart3"></div>
+            
+            <!-- Top decorations -->
+            <div class="cake-topping">
+                <div class="topping-swirl swirl1"></div>
+                <div class="topping-swirl swirl2"></div>
+                <div class="topping-swirl swirl3"></div>
+                <div class="topping-swirl swirl4"></div>
+                <div class="topping-swirl swirl5"></div>
+            </div>
+            
+            <!-- Candles -->
+            <div class="candle candle1">
+                <div class="candle-body"></div>
+                <div class="candle-wick"></div>
+                <div class="flame">
+                    <div class="flame-inner"></div>
+                </div>
+            </div>
+            <div class="candle candle2">
+                <div class="candle-body"></div>
+                <div class="candle-wick"></div>
+                <div class="flame">
+                    <div class="flame-inner"></div>
+                </div>
+            </div>
+            <div class="candle candle3">
+                <div class="candle-body"></div>
+                <div class="candle-wick"></div>
+                <div class="flame">
+                    <div class="flame-inner"></div>
+                </div>
+            </div>
+            
+            <!-- Message -->
+            <div class="message-box">
+                <h2>Happy Birthday!</h2>
+            </div>
+        </div>
+        <div class="continue-btn" id="continue-btn">Continue to Card ❤️</div>
+    </div>
+
+    <!-- Main Birthday Card -->
+    <div class="container" id="main-content">
+        <div class="card">
+            <div class="card-front">
+                <div class="heart"></div>
+                <h2>Click to open</h2>
+            </div>
+            <div class="card-inside">
+                <h1>Happy Birthday!</h1>
+                <p class="message">To the most amazing person in my life. You make every day special.</p>
+                <div class="gift-section">
+                    <h3>Click on the gifts below for surprises!</h3>
+                    <div class="gifts">
+                        <div class="gift" id="gift1">🎁</div>
+                        <div class="gift" id="gift2">🎁</div>
+                        <div class="gift" id="gift3">🎁</div>
+                    </div>
+                </div>
+                <div class="memory-section hidden" id="memory-section">
+                    <h3>Our Memories</h3>
+                    <div class="memory-container">
+                        <div class="memory-box">
+                            <img src="/placeholder.svg?height=200&width=300" alt="Memory 1">
+                            <p>Our first date</p>
+                        </div>
+                        <div class="memory-box">
+                            <img src="/placeholder.svg?height=200&width=300" alt="Memory 2">
+                            <p>That amazing trip</p>
+                        </div>
+                        <div class="memory-box">
+                            <img src="/placeholder.svg?height=200&width=300" alt="Memory 3">
+                            <p>When we laughed for hours</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="poem-section hidden" id="poem-section">
+                    <h3>A Poem For You</h3>
+                    <p class="poem">
+                        Every moment with you is a gift,<br>
+                        Your smile gives my heart a lift.<br>
+                        On this special day of yours,<br>
+                        My love for you forever soars.<br><br>
+                        Happy Birthday, my love!
+                    </p>
+                </div>
+                <div class="wish-section hidden" id="wish-section">
+                    <h3>Make a Birthday Wish</h3>
+                    <div class="cake">
+                        <div class="candle" id="candle1">
+                            <div class="flame"></div>
+                        </div>
+                        <div class="candle" id="candle2">
+                            <div class="flame"></div>
+                        </div>
+                        <div class="candle" id="candle3">
+                            <div class="flame"></div>
+                        </div>
+                    </div>
+                    <p>Click the candles to blow them out and make a wish!</p>
+                </div>
+                <button class="customize-btn" id="customize-btn">Customize This Card</button>
+                <div class="customize-panel hidden" id="customize-panel">
+                    <h3>Customize Your Message</h3>
+                    <textarea id="custom-message" placeholder="Write your personal message here..."></textarea>
+                    <button id="save-message">Save Message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="confetti-container"></div>
+    <audio id="birthday-song" loop>
+        <source src="" type="audio/mpeg">
+    </audio>
+    <script src="script.js"></script>
+</body>
+</html>
