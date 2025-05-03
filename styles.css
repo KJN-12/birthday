@@ -31,9 +31,15 @@ body {
 }
 
 @keyframes pulse {
-  0% { transform: translateX(-50%) scale(1); }
-  50% { transform: translateX(-50%) scale(1.05); }
-  100% { transform: translateX(-50%) scale(1); }
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.05);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
 }
 
 /* Intro Animation Styles */
@@ -209,20 +215,56 @@ body {
   z-index: 1;
 }
 
-.layer1 .drip1 { left: 20px; height: 25px; }
-.layer1 .drip2 { left: 50px; height: 18px; }
-.layer1 .drip3 { left: 90px; height: 22px; }
-.layer1 .drip4 { left: 130px; height: 15px; }
-.layer1 .drip5 { left: 160px; height: 20px; }
+.layer1 .drip1 {
+  left: 20px;
+  height: 25px;
+}
+.layer1 .drip2 {
+  left: 50px;
+  height: 18px;
+}
+.layer1 .drip3 {
+  left: 90px;
+  height: 22px;
+}
+.layer1 .drip4 {
+  left: 130px;
+  height: 15px;
+}
+.layer1 .drip5 {
+  left: 160px;
+  height: 20px;
+}
 
-.layer2 .drip1 { left: 15px; height: 20px; }
-.layer2 .drip2 { left: 45px; height: 15px; }
-.layer2 .drip3 { left: 85px; height: 18px; }
-.layer2 .drip4 { left: 120px; height: 22px; }
+.layer2 .drip1 {
+  left: 15px;
+  height: 20px;
+}
+.layer2 .drip2 {
+  left: 45px;
+  height: 15px;
+}
+.layer2 .drip3 {
+  left: 85px;
+  height: 18px;
+}
+.layer2 .drip4 {
+  left: 120px;
+  height: 22px;
+}
 
-.layer3 .drip1 { left: 15px; height: 18px; }
-.layer3 .drip2 { left: 50px; height: 22px; }
-.layer3 .drip3 { left: 90px; height: 15px; }
+.layer3 .drip1 {
+  left: 15px;
+  height: 18px;
+}
+.layer3 .drip2 {
+  left: 50px;
+  height: 22px;
+}
+.layer3 .drip3 {
+  left: 90px;
+  height: 15px;
+}
 
 /* Sprinkles */
 .sprinkles {
@@ -237,12 +279,9 @@ body {
   bottom: 45px;
   left: 70px;
   background-image: radial-gradient(circle, #ff80ab 30%, transparent 30%),
-    radial-gradient(circle, #ffeb3b 30%, transparent 30%), 
-    radial-gradient(circle, #64b5f6 30%, transparent 30%),
-    radial-gradient(circle, #81c784 30%, transparent 30%), 
-    radial-gradient(circle, #ff80ab 30%, transparent 30%),
-    radial-gradient(circle, #ffeb3b 30%, transparent 30%), 
-    radial-gradient(circle, #64b5f6 30%, transparent 30%),
+    radial-gradient(circle, #ffeb3b 30%, transparent 30%), radial-gradient(circle, #64b5f6 30%, transparent 30%),
+    radial-gradient(circle, #81c784 30%, transparent 30%), radial-gradient(circle, #ff80ab 30%, transparent 30%),
+    radial-gradient(circle, #ffeb3b 30%, transparent 30%), radial-gradient(circle, #64b5f6 30%, transparent 30%),
     radial-gradient(circle, #81c784 30%, transparent 30%);
   background-size: 10px 10px;
   background-position: 0 0, 10px 5px, 20px 0px, 30px 5px, 40px 0px, 50px 5px, 60px 0px, 70px 5px;
@@ -256,10 +295,8 @@ body {
   bottom: 95px;
   left: 85px;
   background-image: radial-gradient(circle, #ff80ab 30%, transparent 30%),
-    radial-gradient(circle, #ffeb3b 30%, transparent 30%), 
-    radial-gradient(circle, #64b5f6 30%, transparent 30%),
-    radial-gradient(circle, #81c784 30%, transparent 30%), 
-    radial-gradient(circle, #ff80ab 30%, transparent 30%),
+    radial-gradient(circle, #ffeb3b 30%, transparent 30%), radial-gradient(circle, #64b5f6 30%, transparent 30%),
+    radial-gradient(circle, #81c784 30%, transparent 30%), radial-gradient(circle, #ff80ab 30%, transparent 30%),
     radial-gradient(circle, #ffeb3b 30%, transparent 30%);
   background-size: 10px 10px;
   background-position: 0 0, 10px 5px, 20px 0px, 30px 5px, 40px 0px, 50px 5px;
@@ -273,8 +310,7 @@ body {
   bottom: 145px;
   left: 100px;
   background-image: radial-gradient(circle, #ff80ab 30%, transparent 30%),
-    radial-gradient(circle, #ffeb3b 30%, transparent 30%), 
-    radial-gradient(circle, #64b5f6 30%, transparent 30%),
+    radial-gradient(circle, #ffeb3b 30%, transparent 30%), radial-gradient(circle, #64b5f6 30%, transparent 30%),
     radial-gradient(circle, #81c784 30%, transparent 30%);
   background-size: 10px 10px;
   background-position: 0 0, 10px 5px, 20px 0px, 30px 5px;
@@ -304,11 +340,26 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.swirl1 { left: 10px; top: -10px; }
-.swirl2 { left: 30px; top: -15px; }
-.swirl3 { left: 50px; top: -18px; }
-.swirl4 { left: 70px; top: -15px; }
-.swirl5 { left: 90px; top: -10px; }
+.swirl1 {
+  left: 10px;
+  top: -10px;
+}
+.swirl2 {
+  left: 30px;
+  top: -15px;
+}
+.swirl3 {
+  left: 50px;
+  top: -18px;
+}
+.swirl4 {
+  left: 70px;
+  top: -15px;
+}
+.swirl5 {
+  left: 90px;
+  top: -10px;
+}
 
 /* Teddy Bear */
 .teddy-bear {
@@ -340,8 +391,12 @@ body {
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 }
 
-.teddy-ear-left { left: 0; }
-.teddy-ear-right { right: 0; }
+.teddy-ear-left {
+  left: 0;
+}
+.teddy-ear-right {
+  right: 0;
+}
 
 .teddy-face {
   position: absolute;
@@ -360,8 +415,12 @@ body {
   top: 5px;
 }
 
-.teddy-eye-left { left: 6px; }
-.teddy-eye-right { right: 6px; }
+.teddy-eye-left {
+  left: 6px;
+}
+.teddy-eye-right {
+  right: 6px;
+}
 
 .teddy-nose {
   width: 6px;
@@ -451,8 +510,12 @@ body {
   top: 8px;
 }
 
-.kuromi-eye-left { left: 5px; }
-.kuromi-eye-right { right: 5px; }
+.kuromi-eye-left {
+  left: 5px;
+}
+.kuromi-eye-right {
+  right: 5px;
+}
 
 .kuromi-bow {
   width: 18px;
@@ -476,8 +539,14 @@ body {
   border-radius: 50%;
 }
 
-.kuromi-bow:before { top: -2px; left: -2px; }
-.kuromi-bow:after { top: -2px; right: -2px; }
+.kuromi-bow:before {
+  top: -2px;
+  left: -2px;
+}
+.kuromi-bow:after {
+  top: -2px;
+  right: -2px;
+}
 
 /* Heart Decorations */
 .heart-decoration {
@@ -502,8 +571,14 @@ body {
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 }
 
-.heart-decoration:before { top: -7.5px; left: 0; }
-.heart-decoration:after { top: 0; left: -7.5px; }
+.heart-decoration:before {
+  top: -7.5px;
+  left: 0;
+}
+.heart-decoration:after {
+  top: 0;
+  left: -7.5px;
+}
 
 .heart1 {
   bottom: 200px;
@@ -532,9 +607,18 @@ body {
   transform: translateY(-20px);
 }
 
-.candle1 { left: 120px; animation: dropLayer 0.3s 2.9s forwards; }
-.candle2 { left: 140px; animation: dropLayer 0.3s 3.0s forwards; }
-.candle3 { left: 160px; animation: dropLayer 0.3s 3.1s forwards; }
+.candle1 {
+  left: 120px;
+  animation: dropLayer 0.3s 2.9s forwards;
+}
+.candle2 {
+  left: 140px;
+  animation: dropLayer 0.3s 3.0s forwards;
+}
+.candle3 {
+  left: 160px;
+  animation: dropLayer 0.3s 3.1s forwards;
+}
 
 .candle-body {
   width: 8px;
@@ -676,20 +760,122 @@ body {
   }
 }
 
-/* Card Container Styles */
-.card-container {
-  width: 90%;
-  max-width: 800px;
-  height: 500px;
+/* Envelope Container */
+.envelope-container {
+  display: none; /* Initially hidden */
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 100;
-  display: none; /* Initially hidden */
 }
 
-/* Main Card Styles */
+/* Envelope Wrapper Styles - Exactly like the example */
+.wrapper {
+  height: 300px;
+  width: 450px;
+  background-color: #9c27b0; /* Changed to match our theme */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+}
+
+.lid {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-right: 225px solid transparent;
+  border-bottom: 150px solid transparent;
+  border-left: 225px solid transparent;
+  transform-origin: top;
+  transition: transform 0.25s linear;
+}
+
+/* Lid when closed */
+.lid.one {
+  border-top: 150px solid #ba68c8;
+  transform: rotateX(0deg);
+  z-index: 3;
+  transition-delay: 0.75s;
+}
+
+/* Lid when opened */
+.lid.two {
+  border-top: 150px solid #9c27b0;
+  transform: rotateX(90deg);
+  z-index: 1;
+  transition-delay: 0.5s;
+}
+
+.envelope {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-top: 150px solid transparent;
+  border-right: 225px solid #e1bee7;
+  border-bottom: 150px solid #e1bee7;
+  border-left: 225px solid #ce93d8;
+  z-index: 3;
+}
+
+.letter {
+  position: absolute;
+  top: 0;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 15px;
+  z-index: 2;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+/* Animation for envelope opening */
+.wrapper.open .lid.one {
+  transform: rotateX(90deg);
+  transition-delay: 0s;
+}
+
+.wrapper.open .lid.two {
+  transform: rotateX(180deg);
+  transition-delay: 0.25s;
+}
+
+.wrapper.open .letter {
+  transform: translateY(-150px); /* Increased to make card come out more */
+  transition-delay: 0.5s;
+}
+
+/* Animation for envelope disappearing */
+.wrapper.fade-out {
+  animation: fadeOut 0.8s forwards;
+  animation-delay: 0.5s; /* Reduced delay for faster transition */
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    display: none; /* Added to completely remove it from the layout */
+  }
+}
+
+/* Add this new style to ensure the letter/card remains visible */
+.wrapper.fade-out .letter {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1000;
+}
+
+/* Card Styles */
 .card {
   width: 100%;
   height: 100%;
@@ -779,16 +965,34 @@ h3 {
   position: absolute;
 }
 
-.heart:before { top: -50px; left: 0; }
-.heart:after { top: 0; left: -50px; }
+.heart:before {
+  top: -50px;
+  left: 0;
+}
+.heart:after {
+  top: 0;
+  left: -50px;
+}
 
 @keyframes heartbeat {
-  0% { transform: rotate(45deg) scale(0.8); }
-  5% { transform: rotate(45deg) scale(0.9); }
-  10% { transform: rotate(45deg) scale(0.8); }
-  15% { transform: rotate(45deg) scale(1); }
-  50% { transform: rotate(45deg) scale(0.8); }
-  100% { transform: rotate(45deg) scale(0.8); }
+  0% {
+    transform: rotate(45deg) scale(0.8);
+  }
+  5% {
+    transform: rotate(45deg) scale(0.9);
+  }
+  10% {
+    transform: rotate(45deg) scale(0.8);
+  }
+  15% {
+    transform: rotate(45deg) scale(1);
+  }
+  50% {
+    transform: rotate(45deg) scale(0.8);
+  }
+  100% {
+    transform: rotate(45deg) scale(0.8);
+  }
 }
 
 .gift-section {
@@ -814,9 +1018,15 @@ h3 {
   transform: scale(1.2);
 }
 
-.gift:nth-child(1) { animation-delay: 0s; }
-.gift:nth-child(2) { animation-delay: 0.5s; }
-.gift:nth-child(3) { animation-delay: 1s; }
+.gift:nth-child(1) {
+  animation-delay: 0s;
+}
+.gift:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.gift:nth-child(3) {
+  animation-delay: 1s;
+}
 
 .memory-section,
 .poem-section,
@@ -840,7 +1050,6 @@ h3 {
 .memory-box {
   flex: 0 0 auto;
   width: 200px;
-  text-align: center;
 }
 
 .memory-box img {
@@ -894,9 +1103,15 @@ h3 {
   animation: none;
 }
 
-.cake #candle1 { left: 40px; }
-.cake #candle2 { left: 70px; }
-.cake #candle3 { left: 100px; }
+.cake #candle1 {
+  left: 40px;
+}
+.cake #candle2 {
+  left: 70px;
+}
+.cake #candle3 {
+  left: 100px;
+}
 
 .cake .flame {
   animation: flicker 1s infinite alternate;
@@ -972,6 +1187,32 @@ textarea {
 }
 
 @media (max-width: 768px) {
+  .wrapper {
+    height: 250px;
+    width: 350px;
+  }
+
+  .lid {
+    border-right: 175px solid transparent;
+    border-bottom: 125px solid transparent;
+    border-left: 175px solid transparent;
+  }
+
+  .lid.one {
+    border-top: 125px solid #ba68c8;
+  }
+
+  .lid.two {
+    border-top: 125px solid #9c27b0;
+  }
+
+  .envelope {
+    border-top: 125px solid transparent;
+    border-right: 175px solid #e1bee7;
+    border-bottom: 125px solid #e1bee7;
+    border-left: 175px solid #ce93d8;
+  }
+
   .card {
     height: 600px;
   }
@@ -1004,128 +1245,5 @@ textarea {
 
   .message-box h2 {
     font-size: 2rem;
-  }
-}
-
-/* Real Envelope Styles */
-.envelope-container {
-  width: 100%;
-  max-width: 900px;
-  height: 500px;
-  margin: 20px;
-  perspective: 1500px;
-  display: none; /* Initially hidden */
-}
-
-.real-envelope {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.5s;
-  cursor: pointer;
-}
-
-.envelope-front {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  background-color: #9c27b0;
-  border-radius: 10px;
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-}
-
-.envelope-flap {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background-color: #ba68c8;
-  clip-path: polygon(0 0, 100% 0, 50% 100%);
-  transform-origin: top;
-  transition: transform 0.5s;
-  z-index: 3;
-}
-
-.envelope-pocket {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 80%;
-  background-color: #ce93d8;
-  border-radius: 0 0 10px 10px;
-  z-index: 1;
-}
-
-.envelope-seal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60px;
-  height: 60px;
-  background-color: #ff69b4;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 4;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.heart-seal {
-  width: 30px;
-  height: 30px;
-  background-color: white;
-  transform: rotate(45deg);
-  position: relative;
-}
-
-.heart-seal:before,
-.heart-seal:after {
-  content: "";
-  width: 30px;
-  height: 30px;
-  background-color: white;
-  border-radius: 50%;
-  position: absolute;
-}
-
-.heart-seal:before { top: -15px; left: 0; }
-.heart-seal:after { top: 0; left: -15px; }
-
-.envelope-text {
-  position: absolute;
-  bottom: 50px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  color: white;
-  font-size: 1.5rem;
-  font-family: "Dancing Script", cursive;
-  z-index: 5;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-}
-
-/* Animation for envelope opening */
-.real-envelope.open .envelope-flap {
-  transform: rotateX(180deg);
-}
-
-/* Animation for envelope disappearing */
-.real-envelope.fade-out {
-  animation: fadeOut 1s forwards;
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
   }
 }

@@ -127,83 +127,75 @@
 
     <!-- Envelope Container -->
     <div class="envelope-container" id="envelope-container">
-        <div class="real-envelope" id="envelope">
-            <div class="envelope-front">
-                <div class="envelope-flap"></div>
-                <div class="envelope-pocket"></div>
-                <div class="envelope-seal">
-                    <div class="heart-seal"></div>
-                </div>
-                <div class="envelope-text">Click to open</div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Card Container (separate from envelope) -->
-    <div class="card-container" id="card-container">
-        <div class="card" id="birthday-card">
-            <div class="card-front">
-                <div class="heart"></div>
-                <h2>Click to open</h2>
-            </div>
-            <div class="card-inside">
-                <h1>Happy Birthday!</h1>
-                <p class="message">To the most amazing person in my life. You make every day special.</p>
-                <div class="gift-section">
-                    <h3>Click on the gifts below for surprises!</h3>
-                    <div class="gifts">
-                        <div class="gift" id="gift1">🎁</div>
-                        <div class="gift" id="gift2">🎁</div>
-                        <div class="gift" id="gift3">🎁</div>
+        <div class="wrapper" id="envelope">
+            <div class="lid one"></div>
+            <div class="lid two"></div>
+            <div class="envelope"></div>
+            <div class="letter" id="card-container">
+                <div class="card" id="birthday-card">
+                    <div class="card-front">
+                        <div class="heart"></div>
+                        <h2>Click to open</h2>
                     </div>
-                </div>
-                <div class="memory-section hidden" id="memory-section">
-                    <h3>Our Memories</h3>
-                    <div class="memory-container">
-                        <div class="memory-box">
-                            <img src="placeholder.svg" alt="Memory 1">
-                            <p>Our first date</p>
+                    <div class="card-inside">
+                        <h1>Happy Birthday!</h1>
+                        <p class="message">To the most amazing person in my life. You make every day special.</p>
+                        <div class="gift-section">
+                            <h3>Click on the gifts below for surprises!</h3>
+                            <div class="gifts">
+                                <div class="gift" id="gift1">🎁</div>
+                                <div class="gift" id="gift2">🎁</div>
+                                <div class="gift" id="gift3">🎁</div>
+                            </div>
                         </div>
-                        <div class="memory-box">
-                            <img src="placeholder.svg" alt="Memory 2">
-                            <p>That amazing trip</p>
+                        <div class="memory-section hidden" id="memory-section">
+                            <h3>Pictures Together</h3>
+                            <div class="memory-container">
+                                <div class="memory-box">
+                                    <img src="IMG_1473.JPG" alt="Memory 1">
+                                </div>
+                                <div class="memory-box">
+                                    <img src="IMG_9085.jpg" alt="Memory 2">
+                                </div>
+                                <div class="memory-box">
+                                    <img src="IMG_9442.JPG" alt="Memory 3">
+                                </div>
+                            </div>
                         </div>
-                        <div class="memory-box">
-                            <img src="placeholder.svg" alt="Memory 3">
-                            <p>When we laughed for hours</p>
+                        <div class="poem-section hidden" id="poem-section">
+                            <h3>A Letter For My Love</h3>
+                            <p class="poem">
+                                Hello my Love! Happy 21st Birthday! I Love you so much my Loveee!<br>
+                                Wag na matampuhin ha 21 na. Ay ang promise ha, magpapakasal tayo.<br>
+                                Thank you sa pagpapasaya sa akin araw araw. Magbabait palagi ha babyyy.<br>
+                                Happy Birthday sa aking nag iisang baby, asawa, at misis.<br>
+                                Magkita tayo later ha pagkalabas ko kung hindi kayo aalis. Kung aalis naman<br>
+                                kayo ay edi bukas bago mag PE. Okieeee?<br><br>
+                                Happy Birthday, my love!
+                            </p>
+                        </div>
+                        <div class="wish-section hidden" id="wish-section">
+                            <h3>Make a Birthday Wish</h3>
+                            <div class="cake">
+                                <div class="candle" id="candle1">
+                                    <div class="flame"></div>
+                                </div>
+                                <div class="candle" id="candle2">
+                                    <div class="flame"></div>
+                                </div>
+                                <div class="candle" id="candle3">
+                                    <div class="flame"></div>
+                                </div>
+                            </div>
+                            <p>Click the candles to blow them out and make a wish!</p>
+                        </div>
+                        <button class="customize-btn" id="customize-btn">Customize This Card</button>
+                        <div class="customize-panel hidden" id="customize-panel">
+                            <h3>Customize Your Message</h3>
+                            <textarea id="custom-message" placeholder="Write your personal message here..."></textarea>
+                            <button id="save-message">Save Message</button>
                         </div>
                     </div>
-                </div>
-                <div class="poem-section hidden" id="poem-section">
-                    <h3>A Poem For You</h3>
-                    <p class="poem">
-                        Every moment with you is a gift,<br>
-                        Your smile gives my heart a lift.<br>
-                        On this special day of yours,<br>
-                        My love for you forever soars.<br><br>
-                        Happy Birthday, my love!
-                    </p>
-                </div>
-                <div class="wish-section hidden" id="wish-section">
-                    <h3>Make a Birthday Wish</h3>
-                    <div class="cake">
-                        <div class="candle" id="candle1">
-                            <div class="flame"></div>
-                        </div>
-                        <div class="candle" id="candle2">
-                            <div class="flame"></div>
-                        </div>
-                        <div class="candle" id="candle3">
-                            <div class="flame"></div>
-                        </div>
-                    </div>
-                    <p>Click the candles to blow them out and make a wish!</p>
-                </div>
-                <button class="customize-btn" id="customize-btn">Customize This Card</button>
-                <div class="customize-panel hidden" id="customize-panel">
-                    <h3>Customize Your Message</h3>
-                    <textarea id="custom-message" placeholder="Write your personal message here..."></textarea>
-                    <button id="save-message">Save Message</button>
                 </div>
             </div>
         </div>
