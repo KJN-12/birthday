@@ -1030,8 +1030,7 @@ h3 {
 
 .memory-section,
 .poem-section,
-.wish-section,
-.customize-panel {
+.wish-section {
   width: 100%;
   margin: 20px 0;
   padding: 15px;
@@ -1116,25 +1115,6 @@ h3 {
 .cake .flame {
   animation: flicker 1s infinite alternate;
   opacity: 1;
-}
-
-.customize-btn {
-  background-color: #7b1fa2;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 20px;
-  transition: background-color 0.3s;
-}
-
-.customize-btn:hover {
-  background-color: #6a1b9a;
-}
-
-.customize-panel {
-  background-color: #e9ecef;
 }
 
 textarea {

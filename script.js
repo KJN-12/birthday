@@ -124,23 +124,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
-  // Customize message functionality
-  const customizeBtn = document.getElementById("customize-btn")
-  const customizePanel = document.getElementById("customize-panel")
-  const saveMessageBtn = document.getElementById("save-message")
-  const customMessage = document.getElementById("custom-message")
-  const messageElement = document.querySelector(".message")
-
-  customizeBtn.addEventListener("click", () => {
-    toggleSection(customizePanel)
-    customMessage.value = messageElement.textContent
-  })
-
-  saveMessageBtn.addEventListener("click", () => {
-    messageElement.textContent = customMessage.value
-    toggleSection(customizePanel)
-    alert("Your message has been saved! ❤️")
-  })
 
   // Helper function to toggle sections
   function toggleSection(section) {
