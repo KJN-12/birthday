@@ -4,29 +4,47 @@ document.addEventListener("DOMContentLoaded", () => {
   const envelopeContainer = document.getElementById("envelope-container")
   const cardContainer = document.getElementById("card-container")
   const envelope = document.getElementById("envelope")
+  const envelopeText = document.querySelector(".envelope-text") // Added envelope text reference
   const birthdayCard = document.getElementById("birthday-card")
   const continueBtn = document.getElementById("continue-btn")
   const birthdaySong = document.getElementById("birthday-song")
+  const gifts = document.querySelectorAll(".gift")
+
+  // Gift sections that will be revealed
+  const memorySection = document.getElementById("memory-section")
+  const poemSection = document.getElementById("poem-section")
+  const wishSection = document.getElementById("wish-section")
 
   // Try to play the song automatically when the page loads
-  birthdaySong.play().catch((e) => {
-    console.log("Auto-play prevented by browser:", e)
-    // Add a small notification about autoplay being blocked
-    const autoplayMessage = document.createElement("div")
-    autoplayMessage.className = "autoplay-message"
-    autoplayMessage.innerHTML = "Click anywhere to play music 🎵"
-    document.body.appendChild(autoplayMessage)
+  // First set it to muted to bypass autoplay restrictions
+  birthdaySong.muted = true
+  birthdaySong
+    .play()
+    .then(() => {
+      // If successful, unmute after a short delay
+      setTimeout(() => {
+        birthdaySong.muted = false
+      }, 100)
+    })
+    .catch((e) => {
+      console.log("Auto-play prevented by browser:", e)
+      // Add a small notification about autoplay being blocked
+      const autoplayMessage = document.createElement("div")
+      autoplayMessage.className = "autoplay-message"
+      autoplayMessage.innerHTML = "Click anywhere to play music 🎵"
+      document.body.appendChild(autoplayMessage)
 
-    // Allow clicking anywhere to start the music
-    document.body.addEventListener(
-      "click",
-      () => {
-        birthdaySong.play()
-        autoplayMessage.style.display = "none"
-      },
-      { once: true },
-    )
-  })
+      // Allow clicking anywhere to start the music
+      document.body.addEventListener(
+        "click",
+        () => {
+          birthdaySong.muted = false
+          birthdaySong.play()
+          autoplayMessage.style.display = "none"
+        },
+        { once: true },
+      )
+    })
 
   // Continue button click event
   continueBtn.addEventListener("click", () => {
@@ -48,70 +66,73 @@ document.addEventListener("DOMContentLoaded", () => {
     // Open the envelope
     envelope.classList.add("open")
 
-    // After the envelope opens and card slides out, fade out the envelope
+    // After the envelope opens and card slides out completely
     setTimeout(() => {
-      envelope.classList.add("fade-out")
+      // Calculate current position of card for smooth animation
+      const rect = cardContainer.getBoundingClientRect()
 
-      // Move the card container out of the envelope wrapper before it disappears
+      // Set the initial position of the card
       document.body.appendChild(cardContainer)
+      cardContainer.style.position = "fixed"
+      cardContainer.style.top = `${rect.top}px`
+      cardContainer.style.left = `${rect.left}px`
+      cardContainer.style.width = `${rect.width}px`
+      cardContainer.style.height = `${rect.height}px`
+      cardContainer.style.zIndex = "1000"
 
-      // After envelope fades out, center the card on screen
+      // Store the starting dimensions as CSS variables for the animation
+      cardContainer.style.setProperty("--start-top", `${rect.top}px`)
+      cardContainer.style.setProperty("--start-left", `${rect.left}px`)
+      cardContainer.style.setProperty("--start-width", `${rect.width}px`)
+      cardContainer.style.setProperty("--start-height", `${rect.height}px`)
+
+      // Fade out the envelope and the "click to open" text
+      envelope.classList.add("fade-out")
+      envelopeText.classList.add("fade-out") // Added fade-out for envelope text
+
+      // Apply the moving animation to the card with a small delay
+      // This will visibly animate the card's movement and size change to the center
       setTimeout(() => {
-        // Position the card in the center of the screen
-        cardContainer.style.position = "fixed"
-        cardContainer.style.top = "50%"
-        cardContainer.style.left = "50%"
-        cardContainer.style.transform = "translate(-50%, -50%)"
-        cardContainer.style.width = "80%"
-        cardContainer.style.maxWidth = "800px"
-        cardContainer.style.height = "80%"
-        cardContainer.style.maxHeight = "600px"
-        cardContainer.style.zIndex = "1000"
+        cardContainer.classList.add("moving-to-center")
 
-        // Automatically open the card after it's centered
+        // Open the card after it reaches the center
         setTimeout(() => {
           birthdayCard.classList.add("open")
+          // Ensure the card content is fully visible when opened
+          document.querySelector(".card-inside").scrollTop = 0
           setTimeout(() => {
             createConfetti()
           }, 500)
-        }, 500)
-      }, 1000)
-    }, 1500)
+        }, 2000) // Wait for card to reach center (match animation duration)
+      }, 300)
+    }, 1500) // Wait for card to fully slide out of envelope
   })
 
-  // Gift interactions
-  const gift1 = document.getElementById("gift1")
-  const gift2 = document.getElementById("gift2")
-  const gift3 = document.getElementById("gift3")
-  const memorySection = document.getElementById("memory-section")
-  const poemSection = document.getElementById("poem-section")
-  const wishSection = document.getElementById("wish-section")
+  // Gift interactions - modified to reveal sections when clicked
+  gifts.forEach((gift, index) => {
+    gift.addEventListener("click", () => {
+      const emojis = ["🎊", "📝", "🎂"]
+      gift.textContent = emojis[index]
+      createConfetti()
 
-  gift1.addEventListener("click", () => {
-    toggleSection(memorySection)
-    gift1.textContent = "🎊"
-    createConfetti()
-  })
+      // Show the corresponding section
+      const sections = [memorySection, poemSection, wishSection]
 
-  gift2.addEventListener("click", () => {
-    toggleSection(poemSection)
-    gift2.textContent = "📝"
-    createConfetti()
-  })
+      // Show the clicked section
+      sections[index].classList.remove("hidden")
 
-  gift3.addEventListener("click", () => {
-    toggleSection(wishSection)
-    gift3.textContent = "🎂"
-    createConfetti()
+      // Smooth scroll to the section
+      sections[index].scrollIntoView({ behavior: "smooth", block: "start" })
+    })
   })
 
   // Candle blowing interaction
-  const candles = document.querySelectorAll(".wish-section .candle")
+  const candles = document.querySelectorAll(".wish-section .mini-candle")
   let candlesBlown = 0
 
   candles.forEach((candle) => {
     candle.addEventListener("click", function () {
-      const flame = this.querySelector(".flame")
+      const flame = this.querySelector(".mini-flame")
       flame.style.display = "none"
       candlesBlown++
 
@@ -123,29 +144,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     })
   })
-
-
-  // Helper function to toggle sections
-  function toggleSection(section) {
-    if (section.classList.contains("hidden")) {
-      // Hide all sections first
-      document.querySelectorAll(".memory-section, .poem-section, .wish-section, .customize-panel").forEach((s) => {
-        s.classList.add("hidden")
-        s.classList.remove("visible")
-      })
-
-      // Show the selected section
-      section.classList.remove("hidden")
-      setTimeout(() => {
-        section.classList.add("visible")
-      }, 10)
-    } else {
-      section.classList.remove("visible")
-      setTimeout(() => {
-        section.classList.add("hidden")
-      }, 500)
-    }
-  }
 
   // Confetti animation
   function createConfetti() {

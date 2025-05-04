@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday!</title>
-    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Cake Animation Intro -->
@@ -135,19 +135,20 @@
                 <div class="card" id="birthday-card">
                     <div class="card-front">
                         <div class="heart"></div>
-                        <h2>Click to open</h2>
                     </div>
                     <div class="card-inside">
                         <h1>Happy Birthday!</h1>
                         <p class="message">To the most amazing person in my life. You make every day special.</p>
+                        
                         <div class="gift-section">
-                            <h3>Click on the gifts below for surprises!</h3>
+                            <h3>Your Birthday Gifts</h3>
                             <div class="gifts">
                                 <div class="gift" id="gift1">🎁</div>
                                 <div class="gift" id="gift2">🎁</div>
                                 <div class="gift" id="gift3">🎁</div>
                             </div>
                         </div>
+                        
                         <div class="memory-section hidden" id="memory-section">
                             <h3>Pictures Together</h3>
                             <div class="memory-container">
@@ -162,29 +163,127 @@
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="poem-section hidden" id="poem-section">
                             <h3>A Letter For My Love</h3>
                             <p class="poem">
-                                Hello my Love! Happy 21st Birthday! I Love you so much my Loveee!<br>
+                                <strong>Hello my Love! Happy 21st Birthday! I Love you so much my Loveee!</strong><br>
                                 Wag na matampuhin ha 21 na. Ay ang promise ha, magpapakasal tayo.<br>
                                 Thank you sa pagpapasaya sa akin araw araw. Magbabait palagi ha babyyy.<br>
                                 Happy Birthday sa aking nag iisang baby, asawa, at misis.<br>
                                 Magkita tayo later ha pagkalabas ko kung hindi kayo aalis. Kung aalis naman<br>
                                 kayo ay edi bukas bago mag PE. Okieeee?<br><br>
-                                Happy Birthday, my love!
+                                <strong>Happy Birthday, my love!</strong>
                             </p>
                         </div>
+                        
                         <div class="wish-section hidden" id="wish-section">
                             <h3>Make a Birthday Wish</h3>
-                            <div class="cake">
-                                <div class="candle" id="candle1">
-                                    <div class="flame"></div>
+                            <div class="mini-cake-container">
+                                <!-- Cake plate and stand -->
+                                <div class="mini-cake-stand"></div>
+                                <div class="mini-cake-plate"></div>
+                                
+                                <!-- Cake layers -->
+                                <div class="mini-cake-layer mini-layer1">
+                                    <div class="mini-layer-frosting"></div>
+                                    <div class="mini-drip mini-drip1"></div>
+                                    <div class="mini-drip mini-drip2"></div>
+                                    <div class="mini-drip mini-drip3"></div>
+                                    <div class="mini-drip mini-drip4"></div>
+                                    <div class="mini-drip mini-drip5"></div>
                                 </div>
-                                <div class="candle" id="candle2">
-                                    <div class="flame"></div>
+                                
+                                <div class="mini-cake-layer mini-layer2">
+                                    <div class="mini-layer-frosting"></div>
+                                    <div class="mini-drip mini-drip1"></div>
+                                    <div class="mini-drip mini-drip2"></div>
+                                    <div class="mini-drip mini-drip3"></div>
+                                    <div class="mini-drip mini-drip4"></div>
                                 </div>
-                                <div class="candle" id="candle3">
-                                    <div class="flame"></div>
+                                
+                                <div class="mini-cake-layer mini-layer3">
+                                    <div class="mini-layer-frosting"></div>
+                                    <div class="mini-drip mini-drip1"></div>
+                                    <div class="mini-drip mini-drip2"></div>
+                                    <div class="mini-drip mini-drip3"></div>
+                                </div>
+                                
+                                <!-- Birthday Sign/Poster -->
+                                <div class="mini-birthday-sign">
+                                    <div class="mini-sign-stick"></div>
+                                    <div class="mini-sign-board">
+                                        <p>Happy Birthday<br>My Love</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Sprinkles -->
+                                <div class="mini-sprinkles mini-sprinkles1"></div>
+                                <div class="mini-sprinkles mini-sprinkles2"></div>
+                                <div class="mini-sprinkles mini-sprinkles3"></div>
+                                
+                                <!-- Decorations -->
+                                <div class="mini-teddy-bear">
+                                    <div class="mini-teddy-head">
+                                        <div class="mini-teddy-ear mini-teddy-ear-left"></div>
+                                        <div class="mini-teddy-ear mini-teddy-ear-right"></div>
+                                        <div class="mini-teddy-face">
+                                            <div class="mini-teddy-eye mini-teddy-eye-left"></div>
+                                            <div class="mini-teddy-eye mini-teddy-eye-right"></div>
+                                            <div class="mini-teddy-nose"></div>
+                                            <div class="mini-teddy-mouth"></div>
+                                        </div>
+                                    </div>
+                                    <div class="mini-teddy-body"></div>
+                                </div>
+                                
+                                <div class="mini-kuromi">
+                                    <div class="mini-kuromi-head">
+                                        <div class="mini-kuromi-ear mini-kuromi-ear-left"></div>
+                                        <div class="mini-kuromi-ear mini-kuromi-ear-right"></div>
+                                        <div class="mini-kuromi-face">
+                                            <div class="mini-kuromi-eye mini-kuromi-eye-left"></div>
+                                            <div class="mini-kuromi-eye mini-kuromi-eye-right"></div>
+                                        </div>
+                                        <div class="mini-kuromi-bow"></div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Hearts -->
+                                <div class="mini-heart-decoration mini-heart1"></div>
+                                <div class="mini-heart-decoration mini-heart2"></div>
+                                <div class="mini-heart-decoration mini-heart3"></div>
+                                
+                                <!-- Top decorations -->
+                                <div class="mini-cake-topping">
+                                    <div class="mini-topping-swirl mini-swirl1"></div>
+                                    <div class="mini-topping-swirl mini-swirl2"></div>
+                                    <div class="mini-topping-swirl mini-swirl3"></div>
+                                    <div class="mini-topping-swirl mini-swirl4"></div>
+                                    <div class="mini-topping-swirl mini-swirl5"></div>
+                                </div>
+                                
+                                <!-- Candles -->
+                                <div class="mini-candle mini-candle1">
+                                    <div class="mini-candle-body"></div>
+                                    <div class="mini-candle-wick"></div>
+                                    <div class="mini-flame">
+                                        <div class="mini-flame-inner"></div>
+                                    </div>
+                                </div>
+                                <div class="mini-candle mini-candle2">
+                                    <div class="mini-candle-body"></div>
+                                    <div class="mini-candle-wick"></div>
+                                    <div class="mini-flame">
+                                        <div class="mini-flame-inner"></div>
+                                    </div>
+                                </div>
+                                <div class="mini-candle mini-candle3">
+                                    <div class="mini-candle-body"></div>
+                                    <div class="mini-candle-wick"></div>
+                                    <div class="mini-flame">
+                                        <div class="mini-flame-inner"></div>
+                                    </div>
                                 </div>
                             </div>
                             <p>Click the candles to blow them out and make a wish!</p>
@@ -193,10 +292,11 @@
                 </div>
             </div>
         </div>
+        <div class="envelope-text">Click to open</div>
     </div>
 
     <div id="confetti-container"></div>
-    <audio id="birthday-song" preload="auto">
+    <audio id="birthday-song" preload="auto" autoplay loop>
         <source src="Happy Birthday To You  Birthday Songs 2024.mp3" type="audio/mpeg">
     </audio>
     <script src="script.js"></script>
